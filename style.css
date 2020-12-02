@@ -1,0 +1,165 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Microsoft JhengHei", sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#page-wrapper,
+#zen-intro,
+#zen-supporting,
+#sidebar,
+#zen-explanation,
+#zen-participation,
+#zen-benefits,
+#zen-requirements {
+  height: 100%;
+  background: black;
+  color: white;
+  position: relative;
+}
+
+#banner {
+  height: 100%;
+}
+
+/* 圓點 */
+#banner::before{
+  content: '';
+  width: 25px;
+  height: 25px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 55%;
+  left: 69%;
+  border-radius: 50%;
+}
+
+/* 最上方線 */
+#banner::after{
+  content: '';
+  width: 100vw;
+  height: 0.5px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 30px;
+  left: 0px;
+}
+
+#banner h1 {
+  width: 30%;
+  font-size: 7rem;
+  font-weight: 200;
+  line-height: 120px;
+  position: relative;
+  top: 20%;
+  left: 9%;
+  word-wrap: break-word; 
+  word-break: normal; 
+}
+
+#banner h2 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  position: relative;
+  display: inline-block;
+  top: 30%;
+  left: 9.5%;
+}
+
+/* 內文線 */
+#zen-summary::before {
+  content: '';
+  height: 40%;
+  width: 0.5px;
+  position: absolute;
+  top: 48%;
+  left: 65%;
+  background: white;
+  z-index: 1;
+}
+
+/* 右側線 */
+#zen-summary::after {
+  content: '';
+  height: 80%;
+  width: 0.5px;
+  position: absolute;
+  top: 20%;
+  left: 95%;
+  background: white;
+  z-index: 2;
+}
+
+#zen-summary p:nth-child(1){
+  width: 20%;
+  display: inline;
+  position: absolute;
+  top: 450px;
+  left: 1000px;
+}
+
+#zen-summary p:nth-child(2){
+  width: 20%;
+  display: inline;
+  position: absolute;
+  top: 550px;
+  left: 1000px;
+}
+
+#zen-intro::before {  
+  content: '';
+  height: 400px;
+  width: 800px;
+  background: url('https://picsum.photos/800/400/?random=1') no-repeat center center/cover;
+  position: absolute;
+  top: 640px;
+  left: 600px;
+  z-index: 1;
+}
+
+
+#zen-preamble {
+  height: 100vh;
+  width: 350px;
+  position: relative;
+  top: 180px;
+  left: 170px;
+  z-index: 1;
+}
+
+#zen-preamble::before {
+  content: '';
+  height: 100%;
+  width: 0.5px;
+  position: absolute;
+  top: -15%;
+  left: -30%;
+  background: white;
+  z-index: 2;
+}
+#zen-preamble::after{
+  content: '';
+  height: 45%;
+  width: 0.5px;
+  position: absolute;
+  top: 0%;
+  left: 130%;
+  background: white;
+  z-index: 2;
+}
+
+#zen-explanation {
+  width: 600px;
+  position: relative;
+  top: 80%;
+  left: 50%;
+  z-index: 1;
+}
