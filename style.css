@@ -30,6 +30,9 @@ body {
   height: 100%;
 }
 
+#zen-intro {
+  background: url('./images/01.jpg') no-repeat center center/cover; 
+}
 /* 圓點 */
 #banner::before{
   content: '';
@@ -37,15 +40,16 @@ body {
   height: 25px;
   background: rgb(255, 255, 255);
   position: absolute;
-  top: 55%;
-  left: 69%;
+  top: 2%;
+  left: 5%;
   border-radius: 50%;
+  animation: top-dot 2s 1 0.5s ease-in-out alternate forwards;
 }
 
 /* 最上方線 */
 #banner::after{
   content: '';
-  width: 100vw;
+  width: 100%;
   height: 0.5px;
   background: rgb(255, 255, 255);
   position: absolute;
@@ -59,7 +63,7 @@ body {
   font-weight: 200;
   line-height: 120px;
   position: relative;
-  top: 20%;
+  top: 35%;
   left: 9%;
   word-wrap: break-word; 
   word-break: normal; 
@@ -70,24 +74,111 @@ body {
   font-weight: 200;
   position: relative;
   display: inline-block;
-  top: 30%;
+  top: 38%;
   left: 9.5%;
+  text-decoration: none;
 }
 
-/* 內文線 */
-#zen-summary::before {
-  content: '';
-  height: 40%;
-  width: 0.5px;
+#zen-summary {
+  height: 10%;
+  width: 30%;
   position: absolute;
-  top: 48%;
-  left: 65%;
-  background: white;
-  z-index: 1;
+  top: 70%;
+  left: 10%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+#zen-summary a {  
+  text-decoration: none;
+  color: rgb(63, 207, 63);
+}
+
+#zen-summary a:hover {  
+  color:pink;
+}
+
+#zen-summary p {
+  padding: 3%;
+}
+
+#zen-summary p:nth-child(1) {
+  border: 1px solid white;
+}
+
+#zen-summary p:nth-child(2) {
+  background: white;
+  color: black;
+  border: 1px solid white;
+  position: absolute;
+  top: 90%;
+  left: 0;
+}
+
+#zen-summary p:nth-child(2):hover {
+  background: black;
+  color: white;
+  border: 1px solid white;
+}
+
+#zen-preamble {
+  width: 30%;
+  height: 10%;
+  z-index: 5;
+  position: relative;
+  top: 25%;
+  left: 60%;
+}
+
+#zen-preamble h3,
+#zen-explanation h3 {
+  font-size: 30px;
+  margin-bottom: 2%;
+}
+
+#zen-supporting::before{
+  content:'';
+  background: url('./images/02.jpg') no-repeat center center/cover;
+  height: 60%;
+  width: 18%;  
+  position: absolute;
+  left: 10%;
+  top: 8%;
+  z-index: 3;
+}
+
+#zen-supporting::after{
+  content:'';
+  background: url('./images/03.jpg') no-repeat center center/cover;
+  height: 60%;
+  width: 18%;  
+  position: absolute;
+  left: 28%;
+  top: 35%;
+  z-index: 3;
+}
+
+#zen-explanation {
+  width: 30%;
+  position: relative;
+  top: 53%;
+  left: 60%;
+}
+
+
+@keyframes top-dot {
+from{
+  left: 5%
+}
+to{
+  left: 95%
+}
+}
+
+
 
 /* 右側線 */
-#zen-summary::after {
+/* #zen-summary::after {
   content: '';
   height: 80%;
   width: 0.5px;
@@ -162,4 +253,4 @@ body {
   top: 80%;
   left: 50%;
   z-index: 1;
-}
+} */
