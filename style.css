@@ -15,242 +15,287 @@ body {
 #page-wrapper,
 #zen-intro,
 #zen-supporting,
-#sidebar,
-#zen-explanation,
-#zen-participation,
-#zen-benefits,
-#zen-requirements {
+#sidebar {
   height: 100%;
   background: black;
   color: white;
   position: relative;
 }
 
-#banner {
+#sidebar{
+  background: rgb(18, 24, 7);
+}
+
+#wrapper {
   height: 100%;
 }
-
 #zen-intro {
-  background: url('./images/01.jpg') no-repeat center center/cover; 
+  background: url('./images/04.jpg') no-repeat center center/cover; 
 }
-/* 圓點 */
-#banner::before{
-  content: '';
-  width: 25px;
-  height: 25px;
-  background: rgb(255, 255, 255);
+
+#banner h1{
   position: absolute;
-  top: 2%;
-  left: 5%;
-  border-radius: 50%;
-  animation: top-dot 2s 1 0.5s ease-in-out alternate forwards;
+  top: 20%;
+  left: 10%;
+  font-size: 5rem;
 }
-
-/* 最上方線 */
-#banner::after{
-  content: '';
-  width: 100%;
-  height: 0.5px;
-  background: rgb(255, 255, 255);
-  position: absolute;
-  top: 30px;
-  left: 0px;
-}
-
-#banner h1 {
-  width: 30%;
-  font-size: 7rem;
-  font-weight: 200;
-  line-height: 120px;
-  position: relative;
-  top: 35%;
-  left: 9%;
-  word-wrap: break-word; 
-  word-break: normal; 
-}
-
 #banner h2 {
-  font-size: 1.2rem;
-  font-weight: 200;
-  position: relative;
-  display: inline-block;
-  top: 38%;
-  left: 9.5%;
-  text-decoration: none;
-}
-
-#zen-summary {
-  height: 10%;
-  width: 30%;
-  position: absolute;
-  top: 70%;
-  left: 10%;  
+  transform: rotate(-90deg);
+  position: fixed;
+  top: 47%;
+  left: -23.5%;
+  height: 8%;
+  width: 50%;
+  border: 1px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(5px);
+  z-index: 100;
 }
-#zen-summary a {  
+
+#banner h2 abbr {
   text-decoration: none;
-  color: rgb(63, 207, 63);
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-#zen-summary a:hover {  
-  color:pink;
+#banner::before {
+  content: '';
+  background: rgba(255, 255, 255, 0.5);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  top: 90%;
+  left: 50%;
 }
 
-#zen-summary p {
-  padding: 3%;
+#banner::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 90.9%;
+  left: 50.7%;
+  background: url(./images/05.png) no-repeat center center/cover;
+  animation: arrow 1s infinite ease-in-out;
+}
+
+#zen-summary{
+  width: 96.5%;
+  position: relative;
+  left: 3.5%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  border-bottom: 1px solid white;
 }
 
 #zen-summary p:nth-child(1) {
-  border: 1px solid white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 5%;
+}
+
+#zen-summary p>a {
+  color: rgb(110, 163, 110);
+  text-decoration: none;
+  font-weight: 700;
 }
 
 #zen-summary p:nth-child(2) {
-  background: white;
-  color: black;
-  border: 1px solid white;
-  position: absolute;
-  top: 90%;
-  left: 0;
+  width: 25%;
+  height: 100%;
+  backdrop-filter: grayscale(1);
+  color: white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  border-left: 1px solid white;
 }
 
 #zen-summary p:nth-child(2):hover {
-  background: black;
-  color: white;
-  border: 1px solid white;
+  background:white;
+  color: black;
 }
 
-#zen-preamble {
+.preamble {
   width: 30%;
-  height: 10%;
-  z-index: 5;
-  position: relative;
-  top: 25%;
-  left: 60%;
-}
-
-#zen-preamble h3,
-#zen-explanation h3 {
-  font-size: 30px;
-  margin-bottom: 2%;
-}
-
-#zen-supporting::before{
-  content:'';
-  background: url('./images/02.jpg') no-repeat center center/cover;
-  height: 60%;
-  width: 18%;  
   position: absolute;
-  left: 10%;
-  top: 8%;
-  z-index: 3;
+  top: 60%;
+  left: 60%;
+  color: white;
+  z-index: 1;
+}
+
+#zen-preamble h3 {
+  font-size: 2.5rem;
+  padding-bottom: 6%;
+  top: -30%;
+}
+
+#zen-preamble::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  backdrop-filter: invert(0.7);
+  position: absolute;
+  left: 3%;
+  top: 10%;
+  z-index: -1;
+
+}
+
+/* 第二頁 */
+#zen-supporting::before{
+  content: '';
+  background: url(./images/01.jpg) no-repeat center center/cover;
+  width: 30%;
+  height: 80%;
+  position: absolute;
+  z-index: 1;
 }
 
 #zen-supporting::after{
-  content:'';
-  background: url('./images/03.jpg') no-repeat center center/cover;
-  height: 60%;
-  width: 18%;  
-  position: absolute;
-  left: 28%;
-  top: 35%;
-  z-index: 3;
-}
-
-#zen-explanation {
-  width: 30%;
-  position: relative;
-  top: 53%;
-  left: 60%;
-}
-
-
-@keyframes top-dot {
-from{
-  left: 5%
-}
-to{
-  left: 95%
-}
-}
-
-
-
-/* 右側線 */
-/* #zen-summary::after {
   content: '';
-  height: 80%;
-  width: 0.5px;
-  position: absolute;
-  top: 20%;
-  left: 95%;
-  background: white;
-  z-index: 2;
-}
-
-#zen-summary p:nth-child(1){
-  width: 20%;
-  display: inline;
-  position: absolute;
-  top: 450px;
-  left: 1000px;
-}
-
-#zen-summary p:nth-child(2){
-  width: 20%;
-  display: inline;
-  position: absolute;
-  top: 550px;
-  left: 1000px;
-}
-
-#zen-intro::before {  
-  content: '';
-  height: 400px;
-  width: 800px;
-  background: url('https://picsum.photos/800/400/?random=1') no-repeat center center/cover;
-  position: absolute;
-  top: 640px;
-  left: 600px;
-  z-index: 1;
-}
-
-
-#zen-preamble {
-  height: 100vh;
-  width: 350px;
-  position: relative;
-  top: 180px;
-  left: 170px;
-  z-index: 1;
-}
-
-#zen-preamble::before {
-  content: '';
-  height: 100%;
-  width: 0.5px;
-  position: absolute;
-  top: -15%;
-  left: -30%;
-  background: white;
-  z-index: 2;
-}
-#zen-preamble::after{
-  content: '';
-  height: 45%;
-  width: 0.5px;
-  position: absolute;
-  top: 0%;
-  left: 130%;
-  background: white;
-  z-index: 2;
-}
-
-#zen-explanation {
+  background: url(./images/02.jpg) no-repeat center center/cover;
   width: 600px;
-  position: relative;
-  top: 80%;
-  left: 50%;
+  height: 600px;
+  position: absolute;
+  left: 71%;
+  top: 41%;
   z-index: 1;
-} */
+}
+
+#zen-explanation {
+  z-index: 1;
+  position: relative;
+  left: 32%;
+  top: 15%;
+  width: 50%;
+}
+
+#zen-explanation h3 {
+  font-size: 3rem;
+  padding-bottom: 20px;
+  position: relative;
+  left: -80px;
+}
+
+#zen-explanation::after{
+  content: '';
+  width: 200px;
+  height: 200px;
+  /* background: white; */
+  position: absolute;
+  top: 260%;
+  left: -46%;
+  backdrop-filter: invert(0.7);
+}
+
+#zen-participation {
+  z-index: 5;
+  width: 39%;
+  position: relative;
+  left: 32%;
+  top: 40%;
+  margin: 0;
+}
+
+#zen-participation h3 {
+  font-size: 3rem;
+  width: 40%;
+  position: relative;
+  left: 70%;
+  padding-bottom: 20px;
+}
+
+/* 右邊色塊 */
+#zen-participation::after{
+  content: '';
+  width: 300px;
+  height: 400px;
+  /* background: white; */
+  position: absolute;
+  top: -150%;
+  left: 135%;
+  backdrop-filter: invert(0.7);
+}
+
+/* 第三頁 */
+#zen-benefits {
+  z-index: 10;
+  width: 30%;
+  position: absolute;
+  top: 120%;
+  left: 10%;
+}
+
+#zen-benefits h3 {
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+
+
+#zen-requirements {
+  z-index: 10;
+  width: 45%;
+  position: absolute;
+  top: 155%;
+  left: 50%;
+}
+
+#zen-requirements h3 {
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+
+/* 左邊兩個色塊 */
+#design-selection::before{
+  content: '';
+  width: 45%;
+  height: 9%;
+  background: rgba(255, 255, 255, 0.658);
+  position: absolute;
+  top: 0;  
+}
+
+#design-selection::after{
+  content: '';
+  width: 45%;
+  height: 50%;
+  background:rgba(255, 255, 255, 0.658);
+  position: absolute;
+  top: 50%;  
+  z-index: 1;
+}
+
+/* 右圖 */
+#design-archives::before {
+  content: '';
+  width: 55%;
+  height: 41%;
+  background:url(./images/03.jpg) no-repeat center center/cover;
+  position: absolute;
+  top: 9%;
+  left: 45%;
+}
+
+#wrapper{
+  z-index: 10;
+  display: flex;
+  align-items: flex-end;
+}
+
+@keyframes arrow {
+0%{
+  top: 90.9%
+}
+50%{
+  top: 92%
+}
+100%{
+  top: 90.9%
+}
+}
