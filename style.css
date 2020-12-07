@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=League+Script&family=Meie+Script&family=Petit+Formal+Script&display=swap');
+@import 'animate.min.css';
+
 *{
   margin: 0;
   padding: 0;
@@ -23,7 +26,7 @@ body {
 }
 
 #sidebar{
-  background: rgb(18, 24, 7);
+  background: rgb(47, 54, 33);
 }
 
 #wrapper {
@@ -38,26 +41,29 @@ body {
   top: 20%;
   left: 10%;
   font-size: 5rem;
+  font-family: 'Clicker Script', cursive;
 }
 #banner h2 {
   transform: rotate(-90deg);
   position: fixed;
-  top: 47%;
+  top: 43%;
   left: -23.5%;
-  height: 8%;
-  width: 50%;
-  border: 1px solid white;
+  height: 10%;
+  width: 52.5%;
+  border-bottom: 1px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(5px);
   z-index: 100;
+  font-family: 'Petit Formal Script', cursive;
 }
 
 #banner h2 abbr {
   text-decoration: none;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 10px;  
+  font-family: 'Petit Formal Script', cursive;
 }
 
 #banner::before {
@@ -121,7 +127,6 @@ body {
 }
 
 .preamble {
-  width: 30%;
   position: absolute;
   top: 60%;
   left: 60%;
@@ -133,11 +138,16 @@ body {
   font-size: 2.5rem;
   padding-bottom: 6%;
   top: -30%;
+  font-family: 'Petit Formal Script', cursive;
+}
+
+#zen-preamble p {
+  width: 60%;
 }
 
 #zen-preamble::before{
   content: '';
-  width: 100%;
+  width: 60%;
   height: 100%;
   backdrop-filter: invert(0.7);
   position: absolute;
@@ -160,7 +170,7 @@ body {
 #zen-supporting::after{
   content: '';
   background: url(./images/02.jpg) no-repeat center center/cover;
-  width: 600px;
+  width: 500px;
   height: 600px;
   position: absolute;
   left: 71%;
@@ -181,6 +191,7 @@ body {
   padding-bottom: 20px;
   position: relative;
   left: -80px;
+  font-family: 'Petit Formal Script', cursive;
 }
 
 #zen-explanation::after{
@@ -209,6 +220,7 @@ body {
   position: relative;
   left: 70%;
   padding-bottom: 20px;
+  font-family: 'Petit Formal Script', cursive;
 }
 
 /* 右邊色塊 */
@@ -219,7 +231,7 @@ body {
   /* background: white; */
   position: absolute;
   top: -150%;
-  left: 135%;
+  left: 130%;
   backdrop-filter: invert(0.7);
 }
 
@@ -233,8 +245,9 @@ body {
 }
 
 #zen-benefits h3 {
-  font-size: 2rem;
+  font-size: 3rem;
   padding-bottom: 20px;
+  font-family: 'Petit Formal Script', cursive;
 }
 
 
@@ -247,8 +260,9 @@ body {
 }
 
 #zen-requirements h3 {
-  font-size: 2rem;
+  font-size: 3rem;
   padding-bottom: 20px;
+  font-family: 'Petit Formal Script', cursive;
 }
 
 /* 左邊兩個色塊 */
