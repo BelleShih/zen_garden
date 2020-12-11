@@ -27,12 +27,17 @@ body {
 #zen-explanation,
 #zen-participation,
 #zen-benefits,
-#zen-requirements,
-#footer,
-#wrapper {
+#zen-requirements {
   height: 100%;
   background: white;
   color: black;
+  position: relative;
+}
+
+#footer {
+  height: 50%;
+  background: rgb(32, 32, 32);
+  color: rgb(255, 255, 255);
   position: relative;
 }
 
@@ -47,7 +52,7 @@ body {
   position: absolute;
   top: 40%;
   left: 55%;
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 300;
 }
 
@@ -57,8 +62,8 @@ body {
   height: 120%;
   background: white;
   position: absolute;
-  top: 255%;
-  left: 95.7%;
+  top: 365%;
+  left: 100.1%;
 }
 
 #banner h2 {
@@ -93,6 +98,7 @@ body {
   position: absolute;
   top: 90%;
   left: 50%;
+  z-index: 2;
 }
 
 /* 首頁下方箭頭 */
@@ -105,6 +111,7 @@ body {
   left: 50.7%;
   background: url(./images/05.png) no-repeat center center/cover;
   animation: arrow 1s infinite ease-in-out;
+  z-index: 2;
 }
 
 #zen-summary{
@@ -121,13 +128,13 @@ body {
   padding-top: 1%;
   padding-bottom: 1%;
   padding-left: 5%;  
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   backdrop-filter: blur(5px);
 }
 
 #zen-summary p>a {
-  color: rgb(110, 163, 110);
+  color: rgb(123, 205, 230);
   text-decoration: none;
   font-weight: 700;
 }
@@ -139,17 +146,16 @@ body {
   color: white;
   padding-top: 1%;
   padding-bottom: 1%;
-  padding-left: 2%;
+  padding-left: 0.8%;
   border-left: 1px solid white;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
-
+  transition: 0.5s;
 }
 
 #zen-summary p:nth-child(2):hover {
   background:white;
   color: black;
-  font-size: 1.3rem;
   font-weight: 700;
 }
 
@@ -198,7 +204,7 @@ body {
   height: 220%;
   /* backdrop-filter: invert(0.7); */
   position: absolute;
-  left: -14%;
+  left: -15%;
   top: -27%;
   background: black;
   z-index: -1;
@@ -208,10 +214,10 @@ body {
 #zen-preamble::after{
   content: '';
   width: 30%;
-  height: 160%;
+  height: 64%;
   position: absolute;
-  left: 20%;
-  top: 33%;
+  left: 16.85%;
+  top: 112%;
   background: black;
   z-index: -1;
 }
@@ -237,8 +243,8 @@ body {
 #zen-explanation::before {
   content: '';
   background: url(./images/04.jpeg)no-repeat center center/cover;
-  width: 48%;
-  height: 80%;
+  width: 50%;
+  height: 60%;
   position: absolute;
   top: 20%;
   left: 0%;
@@ -246,7 +252,7 @@ body {
 }
 
 /* 白色色塊 */
-#zen-explanation::after{
+/* #zen-explanation::after{
   content: '';
   background:white;
   width: 10%;
@@ -255,16 +261,16 @@ body {
   top: 20.5%;
   left: 5%;
   z-index: 2;
-}
+} */
 
 /* 下方米色色塊 */
-#zen-explanation p::before {
+#zen-explanation h3::before {
 content: '';
-width: 110%;
-height: 300%;
+width: 125%;
+height: 350%;
 background: rgb(214, 213, 200);
 position: absolute;
-top: 650%;
+top: 880%;
 left: -40%;
 z-index: 2;
 }
@@ -277,50 +283,233 @@ z-index: 2;
 /* 右側圖片 */
 #zen-participation::before {
   content: '';
-  width: 51.5%;
+  width: 50%;
   height: 100%;
   background: url(./images/03.jpeg)no-repeat center center/cover;
   position: absolute;
-  left: 48.2%;
-  top: 9.4%;
+  left: 50%;
+  top: -13.8%;
+  z-index: 3;
+}
+
+/* 圖片上方色塊 */
+#zen-participation::after{
+  content: '';
+  width: 10%;
+  height: 20%;
+  position: absolute;
+  top: -15%;
+  left: 79.7%;
+  background:white;
   z-index: 3;
 }
 
 #zen-participation h3 {
   width: 35%;
   position: relative;
-  top: 40%;
+  top: 30%;
   left: 10%;
   font-size: 3rem;
   font-weight: 300;
 }
 
 /* 上方米色色塊 */
-#zen-participation h3::before{
+#zen-participation h3::before {
   content: '';
   width: 160%;
   height: 500%;
   background: rgb(214, 213, 200);
-  position: absolute;
-  top: -710%;
+  position: absolute;  
+  top: -900%;
   left: -41%;
+}
+
+#zen-participation h3::after {
+  content: '';
+  width: 29.6%;
+  height: 305%;
+  position: absolute;
+  background:rgb(0, 0, 0);
+  top: -405%;
+  left: 227.5%;
+  z-index: 5;
 }
 
 #zen-participation p {
   width: 30%;
   position: relative;
-  top: 50%;
+  top: 35%;
   left: 10%;
 }
 
+/* 第三頁 */
+/* 上方色塊 */
+#zen-benefits::before {
+  content: '';
+  width: 80%;
+  height: 40%;
+  position: absolute;
+  top: -20%;
+  left: 20%;
+  background:rgb(214, 213, 200);
+  z-index: 3;
+}
 
+/* 左邊圖片 */
+#zen-benefits::after {
+  content: '';
+  width: 60%;
+  height: 70%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background: url(./images/08.jpeg)no-repeat center center/cover;
+  z-index: 4;
+}
+
+#zen-benefits h3 {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  font-size: 3rem;
+  font-weight: 300;
+  z-index: 5;
+}
+
+/* 白色底圖色塊 */
+#zen-benefits h3::before {
+  content: '';
+  width: 534%;
+  height: 800%;
+  position: absolute;
+  top: -170%;
+  left: -100%;
+  background: rgb(255, 255, 255);
+  z-index: -1;
+}
+
+#zen-benefits p {
+  width: 35%;
+  position: absolute;
+  top: 40%;
+  left: 60%;
+  z-index: 5;
+}
+
+#zen-benefits p::before {
+  content: '';
+  width: 170%;
+  height: 250%;
+  position: absolute;
+  top: 300%;
+  left: -56%;
+  background: rgb(214, 213, 200);
+  z-index: -1;
+}
+
+#zen-benefits p::after {
+  content: '';
+  width: 30%;
+  height: 250%;
+  position: absolute;
+  top: 120%;
+  left: -175%;
+  background: white;
+}
+
+/* 第四頁 */
+
+/* 右圖 */
+#zen-requirements::before {
+  content: '';
+  width: 50%;
+  height: 60%;
+  background: url(./images/02.jpeg)no-repeat center center/cover;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+#zen-requirements::after {
+  content: '';
+  width: 10%;
+  height: 20%;
+  position: absolute;
+  top: 60%;
+  left: 90%;
+  background: white;
+  z-index: 3;
+}
+
+#zen-requirements h3 {
+  width: 35%;
+  position: relative;
+  top: 25%;
+  left: 10%;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+/* 上方黑色色塊 */
+#zen-requirements h3::before {
+  content: '';
+  width: 116%;
+  height: 250%;
+  background: black;
+  position: absolute;
+  top: -640%;
+  left: -29%;
+}
+
+#zen-requirements p {
+  width: 35%;
+  position: relative;
+  top: 30%;
+  left: 10%;  
+}
+
+/* footer---------------- */
+#footer {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px 0;
+}
+
+#footer a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 10%;
+  transition: 1s;
+}
+
+#footer a:hover {
+  color: black;
+  background: white;
+}
 
 /*  */
 #wrapper {
+  height: 30%;
+  width: 60%;
   position: absolute;
   top: 300%;
   left: 20%;
+  display: flex;
+  justify-content:space-around;
+  margin-top: 60px;
 }
+
+#wrapper a {
+  color:rgb(214, 213, 200);
+  text-decoration: none;
+}
+
+/* animation--------------------------- */
 @keyframes arrow {
 0%{
   top: 90.9%
