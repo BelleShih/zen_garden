@@ -12,6 +12,9 @@
 	<meta name="description" content="A demonstration of what can be accomplished visually through CSS-based design.">
 	<meta name="robots" content="all">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./animate.js">
+	<!-- animate.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 	<!--[if lt IE 9]>
 	<script src="script/html5shiv.js"></script>
@@ -22,7 +25,7 @@
 	<div id="page-wrapper" class="page-wrapper">
 		<section id="zen-intro" class="intro">
 			<header id="banner" role="banner">
-				<h1>CSS Zen Garden</h1>
+				<h1 class="animate__animated animate__fadeInDown">CSS Zen Garden</h1>
 				<h2>The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2>
 			</header>
 			<div id="zen-summary" class="summary" role="article">
@@ -30,13 +33,13 @@
 				<p>Download the example <a href="/examples/index" title="This page's source HTML code, not to be modified.">html file</a> and <a href="/examples/style.css"
 						title="This page's sample CSS, the file you may modify.">css file</a></p>
 			</div>
-			<div id="zen-preamble" class="preamble" role="article">
-				<h3>The Road to Enlightenment</h3>
-				<p>Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible <abbr title="Document Object Model">DOM</abbr>s, broken <abbr
+			<div id="zen-preamble" class="preamble " role="article">
+				<h3 class="animate__animated animate__fadeInLeft">The Road to Enlightenment</h3>
+				<p class="animate__animated animate__fadeInLeft">Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible <abbr title="Document Object Model">DOM</abbr>s, broken <abbr
 						title="Cascading Style Sheets">CSS</abbr> support, and abandoned browsers.</p>
-				<p>We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the <abbr title="World Wide Web Consortium">W3C</abbr>, <abbr
+				<p class="animate__animated animate__fadeInLeft">We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the <abbr title="World Wide Web Consortium">W3C</abbr>, <abbr
 						title="Web Standards Project">WaSP</abbr>, and the major browser creators.</p>
-				<p>The CSS Zen Garden invites you to relax and meditate on the important lessons of the masters. Begin to see with clarity. Learn to use the time-honored techniques in new and
+				<p class="animate__animated animate__fadeInLeft">The CSS Zen Garden invites you to relax and meditate on the important lessons of the masters. Begin to see with clarity. Learn to use the time-honored techniques in new and
 					invigorating fashion. Become one with the web.</p>
 			</div>
 		</section>
@@ -188,6 +191,40 @@
 	<div class="extra4" role="presentation"></div>
 	<div class="extra5" role="presentation"></div>
 	<div class="extra6" role="presentation"></div>
+
+	<script src="./js/jquery-3.5.1.min.js"></script>
+	<script src="./js/jquery.easeScroll.js"></script>
+	<script>
+		
+		$(window).scroll(function(){
+			console.log($(window).scrollTop())
+			if($(window).scrollTop() >= 200) {
+        $('#zen-explanation h3').addClass("animate__animated animate__fadeInRight");
+			}			
+			if($(window).scrollTop() >= 300) {
+        $('#zen-explanation p').addClass("animate__animated animate__fadeInRight");
+			}
+			if($(window).scrollTop() >= 900) {
+        $('#zen-participation h3').addClass("animate__animated animate__fadeInRight");
+			}
+			if($(window).scrollTop() >= 1000) {
+        $('#zen-participation p').addClass("animate__animated animate__fadeInLeft");
+			}
+			if($(window).scrollTop() >= 2000) {
+        $('#zen-benefits h3').addClass("animate__animated animate__fadeInRight");
+			}
+			if($(window).scrollTop() >= 2100) {
+        $('#zen-benefits p').addClass("animate__animated animate__fadeInLeft");
+			}
+			if($(window).scrollTop() >= 2800) {
+        $('#zen-requirements h3').addClass("animate__animated animate__fadeInLeft");
+			}
+			if($(window).scrollTop() >= 2900) {
+        $('#zen-requirements p').addClass("animate__animated animate__fadeInRight");
+			}
+		});
+
+	</script>
 </body>
 
 </html>

@@ -14,10 +14,6 @@ body {
   width: 100%;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 #page-wrapper,
 #zen-intro,
 #zen-supporting,
@@ -55,9 +51,9 @@ body {
 #banner h1{
   position: absolute;
   top: 40%;
-  left: 54%;
+  left: 55%;
   font-size: 6rem;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 #banner h1::before {
@@ -67,7 +63,7 @@ body {
   background: white;
   position: absolute;
   top: 365%;
-  left: 100%;
+  left: 100.1%;
 }
 
 #banner h2 {
@@ -173,7 +169,6 @@ body {
 }
 
 #zen-preamble h3 {
-  width: 50%;
   font-size: 4rem;
   padding-bottom: 5%;
   font-weight: 300;
@@ -196,10 +191,11 @@ body {
 /* 黑底色塊左 */
 #zen-preamble::before{
   content: '';
-  width: 55%;
+  width: 53%;
   height: 220%;
+  /* backdrop-filter: invert(0.7); */
   position: absolute;
-  left: -14%;
+  left: -15%;
   top: -27%;
   background: black;
   z-index: -1;
@@ -209,10 +205,10 @@ body {
 #zen-preamble::after{
   content: '';
   width: 30%;
-  height: 69%;
+  height: 64%;
   position: absolute;
-  left: 22%;
-  top: 124%;
+  left: 16.85%;
+  top: 112%;
   background: black;
   z-index: -1;
 }
@@ -246,6 +242,18 @@ body {
   z-index: 3;
 }
 
+/* 白色色塊 */
+/* #zen-explanation::after{
+  content: '';
+  background:white;
+  width: 10%;
+  height: 20%;
+  position: absolute;
+  top: 20.5%;
+  left: 5%;
+  z-index: 2;
+} */
+
 /* 下方米色色塊 */
 #zen-explanation h3::before {
 content: '';
@@ -274,13 +282,13 @@ z-index: 1;
   z-index: 3;
 }
 
-/* 圖片上方白色色塊 */
+/* 圖片上方色塊 */
 #zen-participation::after{
   content: '';
   width: 10%;
   height: 20%;
   position: absolute;
-  top: -14%;
+  top: -15%;
   left: 79.7%;
   background:white;
   z-index: 5;
@@ -289,7 +297,7 @@ z-index: 1;
 #zen-participation h3 {
   width: 35%;
   position: relative;
-  top: 20%;
+  top: 30%;
   left: 10%;
   font-size: 3rem;
   font-weight: 300;
@@ -298,22 +306,21 @@ z-index: 1;
 /* 上方米色色塊 */
 #zen-participation h3::before {
   content: '';
-  width: 170%;
+  width: 160%;
   height: 500%;
   background: rgb(214, 213, 200);
   position: absolute;  
-  top: -700%;
-  left: -40%;
+  top: -900%;
+  left: -41%;
 }
 
-/* 圖片上方黑色色塊 */
 #zen-participation h3::after {
   content: '';
   width: 29.6%;
   height: 305%;
   position: absolute;
   background:rgb(0, 0, 0);
-  top: -215%;
+  top: -405%;
   left: 227.5%;
   z-index: 5;
 }
@@ -321,15 +328,8 @@ z-index: 1;
 #zen-participation p {
   width: 30%;
   position: relative;
-  top: 30%;
+  top: 35%;
   left: 10%;
-  line-height: 1.5rem;
-}
-
-#zen-participation p a {
-  color: rgb(199, 182, 88);
-  font-weight: 500;
-  text-decoration: none;
 }
 
 /* 第三頁 */
@@ -373,7 +373,7 @@ z-index: 1;
   height: 800%;
   position: absolute;
   top: -170%;
-  left: -99%;
+  left: -100%;
   background: rgb(255, 255, 255);
   z-index: -1;
 }
@@ -384,7 +384,6 @@ z-index: 1;
   top: 40%;
   left: 60%;
   z-index: 5;
-  line-height: 1.5rem;
 }
 
 #zen-benefits p::before {
@@ -392,8 +391,8 @@ z-index: 1;
   width: 170%;
   height: 250%;
   position: absolute;
-  top: 289%;
-  left: -55%;
+  top: 300%;
+  left: -56%;
   background: rgb(214, 213, 200);
   z-index: -1;
 }
@@ -435,7 +434,7 @@ z-index: 1;
 #zen-requirements h3 {
   width: 35%;
   position: relative;
-  top: 15%;
+  top: 25%;
   left: 10%;
   font-size: 3rem;
   font-weight: 300;
@@ -444,26 +443,19 @@ z-index: 1;
 /* 上方黑色色塊 */
 #zen-requirements h3::before {
   content: '';
-  width: 117%;
+  width: 116%;
   height: 250%;
   background: black;
   position: absolute;
-  top: -400%;
+  top: -640%;
   left: -29%;
 }
 
 #zen-requirements p {
   width: 35%;
   position: relative;
-  top: 20%;
+  top: 30%;
   left: 10%;  
-  line-height: 1.5rem;
-}
-
-#zen-requirements p a {
-  color: rgb(199, 182, 88);
-  font-weight: 500;
-  text-decoration: none;
 }
 
 /* footer---------------- */
@@ -490,6 +482,7 @@ z-index: 1;
   background: white;
 }
 
+/*  */
 #wrapper {
   height: 30%;
   width: 60%;
@@ -595,7 +588,7 @@ z-index: 1;
     width: 105%;
     height: 150%;
     position: absolute;
-    top: -15%;
+    top: -20%;
     left: -15%;
     z-index: 3;
   }
@@ -608,7 +601,7 @@ z-index: 1;
   #zen-preamble h3 {
     width: 90%;
     position: relative;
-    top: 35%;
+    top: 30%;
     left: -5%;
     font-size: 2rem;
     font-weight: 300;
@@ -670,7 +663,7 @@ z-index: 1;
     background: url(./images/03.jpeg)no-repeat center center/cover;
     position: absolute;
     left: 0%;
-    top: 60%;
+    top: 57%;
     z-index: 1;
   }
   /* 上方米色色塊 */
@@ -792,7 +785,7 @@ z-index: 1;
     color: rgb(199, 182, 88);
     font-weight: 500;
     text-decoration: none;
-  }
+  }  
 
   #footer {  
     height: 60%;
